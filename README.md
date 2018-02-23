@@ -1,2 +1,2 @@
 # vue-marquee-broad
-marquee-broadcast
+marquee-broadcast.
