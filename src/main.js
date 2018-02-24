@@ -14,5 +14,5 @@
 //   template: '<App/>'
 // })
 
-import marquee from './marquee.vue'
-export default marquee
+import VueMarquee from './marquee.vue'
+export default VueMarquee
