@@ -1,10 +1,10 @@
 <template>
-  <div class="marqueeIn" ref="out">
-    <div class="marqueeIn_" :class="run ? speed : ''" >
+  <div class="marqueeIn" ref="out" v-if="show">
+    <div class="marqueeIn_" :class="run ? speed : 'static'">
       <span v-html="content" class="marquee" ref="in"></span>
       <span v-html="content" class="marquee" v-if="run"></span>
     </div>
-    <div class="closeImg">
+    <div class="closeImg" @click="close">
       <img src="./closeBtn.png" width="12px" height="12px" class="closeBtn">
     </div>
   </div>
@@ -64,9 +64,18 @@
     white-space: nowrap;
     padding-right: 200px;
   }
+  .static{
+    position: absolute;
+    left: 20px;
+    top: 0;
+  }
+  .static span{
+    padding-left: 0;
+    text-align: left;
+  }
   @-webkit-keyframes marquee {
-    0%  { -webkit-transform: translate3d(0,0,0); }
-    100% { -webkit-transform: translate3d(-50%,0,0); }
+    0%  { -webkit-transform: translateX(0); }
+    100% { -webkit-transform: translateX(-50%); }
   }
   @keyframes marquee {
     0%  { transform: translateX(0); }
@@ -74,12 +83,20 @@
   }
 </style>
 <script>
+//  let speedObj = {
+//    'speed-1': 5,
+//    'speed-2': 10,
+//    'speed-3': 15,
+//    'speed-4': 20,
+//    'speed-5': 25,
+//  }
   export default {
     name: 'VueMarquee',
     data (){
       return{
         run: false,
         pWidth: '',
+        show: true
       }
     },
     props: {
@@ -95,11 +112,26 @@
         default: true
       }
     },
+    methods: {
+      close() {
+        this.show=false
+      }
+    },
     mounted(){
       this.$nextTick(() => {
         let out = this.$refs.out.clientWidth-44;
         let _in = this.$refs.in.clientWidth-200;
         this.run=_in>out?true:false;
+//        if (_in>out) {
+//          setTimeout(() => {
+//            this.run = true
+//          },1000)
+//        }
+//        setTimeout(() => {
+//          alert()
+//          this.$refs.in.className='marquee marquee_hsaNoPaddingLeft'
+//          this.$refs.in_.className='marquee marquee_hsaNoPaddingLeft'
+//        },speedObj[this.speed]*1000)
       })
     }
   }

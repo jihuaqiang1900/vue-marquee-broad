@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <vue-marquee :content="mContent" speed="speed-3"></vue-marquee>
+    <h2>表土amm</h2>
+    <h2>表土amm</h2>
   </div>
 </template>
 
@@ -13,7 +15,7 @@
     },
     data(){
       return{
-        mContent:'marqueemarqueemarqueemarquee  ss test this is marquee test '
+        mContent:'this is marquee test this is marquee test this is marquee test this is marquee test '
       }
     }
   }
@@ -21,7 +23,6 @@
 
 <style>
   #app {
-    font-size: 0;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
