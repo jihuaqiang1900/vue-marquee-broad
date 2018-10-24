@@ -10,6 +10,7 @@ npm i -s vue-marquee-broad
 ## in compontent use
 ```
 import Marquee from 'vue-marquee-broad'
+import 'vue-marquee-broad/dist/vue-marquee.min.css'
 <vue-marquee :content="'when your text is than the width of screen the txet will be a marquee'" speed="speed-3"></vue-marquee>
 ```
 
