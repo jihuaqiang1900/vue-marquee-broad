@@ -1,28 +1,23 @@
 # vue-marquee-broad
 
 > 跑马灯广播
+## Install
 
-## Build Setup
+```
+npm i -s vue-marquee-broad
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```
+## in compontent use
+```
+import Marquee from 'vue-marquee-broad'
+<vue-marquee :content="'when your text is than the width of screen the txet will be a marquee'" speed="speed-3"></vue-marquee>
 ```
 
-# 使用方式
-+ npm install --save vue-marquee-broad
-+ 页面内：
-    + import Marquee from 'vue-marquee-broad'
-    + 属性有 speed="speed-1~speed-5" , content=""
+## API
+| 参数 | 说明 | 类型 | 默认值 |
+|-----------|-----------|-----------|-------------|
+| content | 广播的文本内容 | `String` | `暂无内容` |
+| speed | 轮播速度 | `speed-1~speed-5` | `speed-2` |
 
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+

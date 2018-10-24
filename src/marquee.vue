@@ -109,7 +109,7 @@
         type: String
       },
       showtwo: {
-        default: true
+        default: false
       }
     },
     methods: {
