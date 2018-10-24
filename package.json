@@ -1,6 +1,6 @@
 {
   "name": "vue-marquee-broad",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "跑马灯广播",
   "author": "jihuaqiang <huaqiangj@tujia.com>",
   "private": false,
@@ -62,5 +62,9 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "repository": ""
+  "keywords": [
+    "marquee",
+    "vue",
+    "component"
+  ]
 }
